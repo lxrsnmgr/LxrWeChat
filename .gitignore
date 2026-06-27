@@ -1,0 +1,20 @@
+# VS 缓存（就是之前超限的大文件根源）
+.vs/
+*.ipch
+*.db
+*.vsidx
+*.suo
+*.vcxproj.user
+# QT/VS编译输出
+Debug/
+Release/
+build/
+out/
+cmake-build-*
+# 临时文件、日志、压缩包
+*.log
+*.tmp
+*.zip
+*.rar
+*.exe
+*.obj
