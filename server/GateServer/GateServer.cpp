@@ -3,9 +3,13 @@
 #include <json/value.h>
 #include <json/reader.h>
 #include "CServer.h"
+#include "ConfigMgr.h"
 
 int main()
 {
+    ConfigMgr gCfgMgr;
+    std::string gate_server_port = gCfgMgr["GateServer"]["Port"];
+    unsigned short gate_port = atoi(gate_server_port.c_str());
     try{
         unsigned short port = static_cast<unsigned short>(8080);
         net::io_context ioc{ 1 };

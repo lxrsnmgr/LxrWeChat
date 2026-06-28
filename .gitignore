@@ -18,3 +18,16 @@ cmake-build-*
 *.rar
 *.exe
 *.obj
+
+# Node.js 项目新增规则（解决你git add刷屏警告）
+node_modules/
+package-lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp
+.pnp.js
+
+# 系统隐藏文件
+Thumbs.db
+.DS_Store
