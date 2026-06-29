@@ -14,6 +14,10 @@
 #include <boost/filesystem.hpp>
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/ini_parser.hpp>
+#include <queue>
+#include <mutex>
+#include <condition_variable>
+#include "hiredis.h"
 
 namespace beast = boost::beast;
 namespace http = beast::http;
@@ -26,5 +30,3 @@ enum ErrorCodes {
 	RPCFailed = 1002,
 };
 
-class ConfigMgr;
-extern ConfigMgr gCfgMgr;
