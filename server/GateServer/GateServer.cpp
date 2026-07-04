@@ -100,7 +100,6 @@ void TestRedis() {
 void TestRedisMgr() {
     assert(RedisMgr::GetInstance()->Set("blogwebsite", "llfc.club"));
     std::string value = "";
-    std::cout << "==================" << std::endl;
     assert(RedisMgr::GetInstance()->Get("blogwebsite", value));
     assert(RedisMgr::GetInstance()->Get("nonekey", value) == false);
     assert(RedisMgr::GetInstance()->HSet("bloginfo", "blogwebsite", "llfc.club"));
@@ -121,7 +120,7 @@ void TestRedisMgr() {
 int main()
 {
     //TestRedis();
-    TestRedisMgr();
+    //TestRedisMgr();
 
     auto& gCfgMgr = ConfigMgr::Inst();
     std::string gate_server_port = gCfgMgr["GateServer"]["Port"];

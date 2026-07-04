@@ -239,7 +239,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="varfiy_edit">
+            <widget class="QLineEdit" name="varify_edit">
              <property name="minimumSize">
               <size>
                <width>0</width>
@@ -291,7 +291,7 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_7">
            <item>
-            <widget class="QPushButton" name="confirm">
+            <widget class="QPushButton" name="sure_btn">
              <property name="minimumSize">
               <size>
                <width>0</width>
@@ -310,7 +310,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="concel">
+            <widget class="QPushButton" name="concel_btn">
              <property name="minimumSize">
               <size>
                <width>0</width>

@@ -3,14 +3,16 @@
       "user": "m15648587670@163.com",
       "pass": "SLhhqc8Uwe32fhip"
     },
-    "mysql":{
-        "host": "127.0.0.1",
-        "port": 3306,
-        "passwd":123456
+
+    "mysql": {
+      "host": "81.68.86.146",
+      "port": 3308,
+      "passwd": "123456"
     },
+
     "redis":{
-        "host":"127.0.0.1",
-        "port":6479,
-        "passwd":123456
+      "host": "127.0.0.1",
+      "port": 6379,
+      "passwd": "123456"
     }
 }
