@@ -38,5 +38,19 @@ enum ErrorCodes {
 	PassedInvalid = 1009,	//密码更新失败
 };
 
+//Defer类
+class Defer {
+public:
+	//接受一个lambda表达式或函数指针
+	Defer(std::function<void()> func) : func_(func){}
+
+	//析构函数中执行传入的函数
+	~Defer() {
+		func_();
+	}
+
+private:
+	std::function<void()> func_;
+};
 #define CODEPREFIX "code_"
 
