@@ -105,3 +105,7 @@ bool MysqlDao::UpdatePwd(const std::string& name, const std::string& newpwd) {
 		return false;
 	}
 }
+
+bool MysqlDao::CheckPwd(const std::string& name, const std::string& pwd, UserInfo& userInfo) {
+
+}

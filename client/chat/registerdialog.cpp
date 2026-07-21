@@ -265,7 +265,7 @@ bool RegisterDialog::checkConfirmValid(){
         return false;
     }
     DelTipErr(TipErr::TIP_CONFIRM_ERR);
-    if(pass != confirm){
+    if(std::strcmp(confirm.toUtf8().constData(), pass.toUtf8().constData())){
         AddTipErr(TipErr::TIP_PWD_CONFIRM, tr("密码和确认密码不匹配"));
         return false;
     } else {
