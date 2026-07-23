@@ -230,5 +230,15 @@ LogicSystem::LogicSystem() {
 		UserInfo userInfo;
 		//查询数据库判断用户名和密码是否匹配
 		bool pwd_valid = MysqlMgr::GetInstance()->CheckPwd(email, pwd, userInfo);
+		if (!pwd_valid) {
+			std::cout << " user pwd not match" << std::endl;
+			root["error"] = ErrorCodes::PassedInvalid;
+			std::string jsonstr = root.toStyledString();
+			beast::ostream(connection->_response.body()) << jsonstr;
+			return true;
+		}
+
+		//查询StatusServer找到合适的连接
+		
 	});
 }
